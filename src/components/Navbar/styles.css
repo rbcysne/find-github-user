@@ -3,9 +3,27 @@
 }
 
 .main-nav-container {
-    padding: 0 0 0 40px;
+    padding: 0 16px;
 }
 
 .nav-text,.nav-text:hover {
     color: #ffffff;
+}
+
+@media (min-width: 576px) {
+    .main-nav-container {
+        padding: 0 32px;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-nav-container {
+        padding: 0 48px;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-nav-container {
+        padding: 0 80px;
+    }
 }

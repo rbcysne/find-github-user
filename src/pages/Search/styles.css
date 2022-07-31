@@ -1,5 +1,5 @@
 .search-container {
-    padding: 48px 96px 0 96px;
+    padding: 16px 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,28 +7,53 @@
 }
 
 .search-card {
-    padding: 56px 0 0 32px;
-    height: 272px;
+    padding: 32px 16px 0 16px;
+    height: 192px;
+    width:auto;
     background: #E6F7FF;
-    margin: 0 0 48px 0;
+    margin: 0 0 24px 0;
 }
 
 .search-card h1 {
-    font-size: 1.6em;
+    font-size: 0.9em;
     margin: 0 0 12px 0;
 }
 
 .search-card input {
     margin: 0 0 24px 0;
+    font-size: 0.7em;
+    
 }
 
-.profile-card {
-    padding: 48px 36px;
-    height: 336px;
-    background: #F5F5F5;
+@media (min-width: 576px) {
+    .search-container {
+        padding: 32px 32px;
+    }
 }
 
-.profile-content-container {
-    display: flex;
-    flex-direction: row;
+@media (min-width: 768px) {
+    .search-container {
+        padding: 48px 48px;
+    }
+
+    .search-card {
+        padding: 56px 32px 0 32px;
+        height: 272px;
+        margin: 0 0 48px 0;
+    }
+
+    .search-card h1 {
+        font-size: 1.6em;
+    }
+
+    .search-card input {
+        font-size: 1.2em;
+        width: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .search-container {
+        padding: 48px 80px;
+    }
 }
