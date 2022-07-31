@@ -1,0 +1,34 @@
+.search-container {
+    padding: 48px 96px 0 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.search-card {
+    padding: 56px 0 0 32px;
+    height: 272px;
+    background: #E6F7FF;
+    margin: 0 0 48px 0;
+}
+
+.search-card h1 {
+    font-size: 1.6em;
+    margin: 0 0 12px 0;
+}
+
+.search-card input {
+    margin: 0 0 24px 0;
+}
+
+.profile-card {
+    padding: 48px 36px;
+    height: 336px;
+    background: #F5F5F5;
+}
+
+.profile-content-container {
+    display: flex;
+    flex-direction: row;
+}
