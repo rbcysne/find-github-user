@@ -1,0 +1,11 @@
+.main-nav {
+    min-height: 70px;  
+}
+
+.main-nav-container {
+    padding: 0 0 0 40px;
+}
+
+.nav-text,.nav-text:hover {
+    color: #ffffff;
+}
