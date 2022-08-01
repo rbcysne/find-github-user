@@ -1,4 +1,5 @@
 import axios from 'axios';
+import ProfileLoader from 'components/ResultCard/ProfileLoader';
 import { useState } from 'react';
 import { UserProfile } from 'types/vendor/github';
 import Button from '../../components/Button';
@@ -18,14 +19,19 @@ const Search = () => {
 
   const [userProfile, setUserProfile] = useState<UserProfile>();
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
+    setIsLoading(true);
     axios
     .get(`https://api.github.com/users/${formData.user}`)
     .then((response) => {
       setUserProfile(response.data);
       console.log(response.data);
+    })
+    .finally(() => {
+      setIsLoading(false);
     })
     .catch((error) => {
       setUserProfile(undefined);
@@ -58,12 +64,13 @@ const Search = () => {
             </div>
           </div>
 
-          { userProfile &&
+          { isLoading ? <ProfileLoader /> : 
+            (userProfile &&
             <ResultCard avatar_url={userProfile.avatar_url} 
                         url={userProfile.url} 
                         followers={userProfile.followers} 
                         location={userProfile.location} 
-                        name={userProfile.name}/>
+                        name={userProfile.name} />)
           }
         </div>
       </form>
